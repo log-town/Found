@@ -6,10 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&display=swap" rel="stylesheet">
     <script src="/jquery-3.5.1.min.js"></script>
-    <title>적성찾기 프로그램 2</title>
+    <title>타이틀</title>
 </head>
 <body>
-    div
+    <section id="main">
+        <h1 class="main_text">나에게 맞는 운동 찾기</h1>
+
+        <p class="page_1">
+            Page 1/5
+        </p>
+    </section>
+
+    <section id="part_1">
+       
+        <ul class="choose_1">
+            <li class="part_01 strong"><a href="#">근력</a></li>
+            <li class="part_02 flex"><a href="#">유연성</a></li>
+            <li class="part_03 stamina"><a href="#">체력</a></li>
+        </ul>
+
+        <!-- 근력 파트  -->
+        <div class="strong_swich">
+            <ul class="part_depth strong_choose">
+                <li class="result_1"><a href="#">마른체형</a></li>
+                <li class="result_2"><a href="#">뚱뚱한체형</a></li>
+            </ul>
+            
+            <div class="strong_01 strong_result">
+                <div class="bar">데이터를 분석하고 있습니다.</div>
+                <p>
+                    <img src="" alt="">
+                </p>
+                <div class="text_box">
+                    <h1>당신에게는</h1>
+                    <p>'A type'을 추천합니다!</p>
+
+                    <button type="button" class="btn_reset">
+                        다시하기
+                    </button>
+                </div> 
+
+            </div><!-- strong_01 -->
+            
+            <div class="strong_02 strong_result">
+                
+                <div class="bar">데이터를 분석하고 있습니다.</div>
+                <p>
+                    <img src="" alt="">
+                </p>
+                <div class="text_box">
+                    <h1>당신에게는</h1>
+                    <p>'B type'을 추천합니다!</p>
+                    <button type="button" class="btn_reset">
+                        다시하기
+                    </button>
+                </div> 
+            </div> <!-- strong_02 -->
+        </div> <!-- strong_wrap --> <!-- 근력파트 -->
+
+
+    </section><!-- part_1 -->
+    
+
+    <script>
+        $(function(){
+            $('.strong').click(function(){
+                $('.choose_1').hide();
+                $('.strong_choose').show();
+            });
+
+            $('.result_1').click(function(){
+                $('.strong_choose').hide();
+                $('.strong_01').show();
+            });
+
+            $('.result_2').click(function(){
+                $('.strong_choose').hide();
+                $('.strong_02').show();
+            });
+
+            $('.btn_reset').click(function(){
+                $('.strong_result').hide()
+                $('.choose_1').fadeIn();
+            });
+
+            
+        });
+        $(function(){
+
+        });
+    </script>
 </body>
 </html>
